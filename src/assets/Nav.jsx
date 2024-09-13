@@ -442,26 +442,6 @@ const NavBar = () => {
                 >
                   TV AND AUDIOS
                 </a>
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm text-gray-700"
-                  role="menuitem"
-                  tabindex="-1"
-                  id="menu-item-5"
-                >
-                  GADGETS
-                </a>
-              </div>
-              <div class="py-1" role="none">
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm text-gray-700"
-                  role="menuitem"
-                  tabindex="-1"
-                  id="menu-item-6"
-                >
-                  ACCESSORIES
-                </a>
               </div>
             </div>
           </div>
@@ -648,8 +628,8 @@ const NavBar = () => {
                 </ul>
               </div>
 
-              <div class="flex items-center  space-x-8 max-lg:ml-auto">
-                <span class="relative">
+              <div class="flex items-center  max-lg:ml-auto">
+                <span class="relative  mr-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20px"
@@ -662,7 +642,7 @@ const NavBar = () => {
                       data-original="#000000"
                     />
                   </svg>
-                  <span class="absolute left-auto -ml-1 top-0 rounded-full bg-black px-1 py-0 text-xs text-white">
+                  <span class="absolute  left-auto -ml-1 top-0 rounded-full bg-black px-1 py-0 text-xs text-white">
                     0
                   </span>
                 </span>
@@ -672,7 +652,7 @@ const NavBar = () => {
                   onClick={() => {
                     setSdrop(!sdrop);
                   }}
-                  class="lg:hidden"
+                  class="lg:hidden mr-5"
                 >
                   <svg
                     class="w-7 h-7 fill-white"
