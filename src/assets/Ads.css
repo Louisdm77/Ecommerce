@@ -1,0 +1,4 @@
+.flexi {
+  box-shadow: 0px 0px 10px rgba(94, 92, 92, 0.2);
+  display: flex;
+}
