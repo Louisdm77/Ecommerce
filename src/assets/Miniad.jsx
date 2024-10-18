@@ -3,8 +3,8 @@ import "./Ads.css";
 import headset from "../assets/Headset.png";
 import Canon from "../assets/Canon.png";
 import phone from "../assets/iphone.png";
-import Buds from "../assets/Buds.png";
-import Buds2 from "../assets/Buds2.jpg";
+import Buds from "../assets/buds.png";
+import Buds2 from "../assets/buds2.jpg";
 import mic from "../assets/mic.png";
 import laptop from "../assets/laptop.png";
 // Import Swiper React components
