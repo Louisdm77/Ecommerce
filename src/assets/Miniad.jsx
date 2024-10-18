@@ -153,7 +153,7 @@ const Mini = () => {
                       </div>
                       <div class="p-2 bg-white">
                         <h3 class="text-lg font-bold text-gray-800">
-                          Canon Cam
+                          Canona mic7
                         </h3>
                         <h4 class="text-lg text-gray-800 font-bold mt-2">
                           $120.5
@@ -226,7 +226,9 @@ const Mini = () => {
                         />
                       </div>
                       <div class="p-2 bg-white">
-                        <h3 class="text-lg font-bold text-gray-800">Velvet</h3>
+                        <h3 class="text-lg font-bold text-gray-800">
+                          Velvet jamz3
+                        </h3>
                         <h4 class="text-lg text-gray-800 font-bold mt-2">
                           $14.5
                         </h4>
@@ -298,7 +300,7 @@ const Mini = () => {
                         />
                       </div>
                       <div class="p-2 bg-white">
-                        <h3 class="text-lg font-bold text-gray-800">Summit</h3>
+                        <h3 class="text-lg font-bold text-gray-800">Hp q244</h3>
                         <h4 class="text-lg text-gray-800 font-bold mt-2">
                           $12.5
                         </h4>
