@@ -2,6 +2,7 @@ import React from "react";
 import NavBody from "./assets/Header.jsx";
 import NavBar from "./assets/Nav.jsx";
 import Ads from "./assets/Ads.jsx";
+import Mini from "./assets/Miniad.jsx";
 import "./index.css";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <NavBar />
       <NavBody />
       <Ads />
+      <Mini />
     </div>
   );
 }
