@@ -9,8 +9,14 @@ function NavBody() {
             NEW ERA OF SMARTPHONES
           </h1>
           <p className="max-w-2xl pl-4 mb-6 box-sizing:border-box font-light text-black lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
-            From checkout to global sales tax compliance, companies around the
-            world use Flowbite to simplify their payment stack.
+            "From cutting-edge technology to seamless integration, tech
+            enthusiasts worldwide rely on{" "}
+            <span
+              style={{ color: "red", fontWeight: "bold", fontSize: "24px" }}
+            >
+              LouisDM
+            </span>{" "}
+            to enhance their gadget experience."
           </p>
           <a
             href="#"
