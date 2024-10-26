@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { FaEnvelope, FaPhone, FaUser } from "react-icons/fa";
 import logo from "./logo.png";
+import "./styles.css";
 import { faSlack } from "@fortawesome/free-brands-svg-icons";
 const NavBar = () => {
   const navStyle = {
-    fontFamily: "sans-serif",
+    // fontFamily: "sans-serif",
     fontWeight: "200",
   };
   const [drop, setDrop] = useState(false);
@@ -21,7 +22,7 @@ const NavBar = () => {
     setTdrop(!tdrop);
   };
   return (
-    <header className="py-2">
+    <header className="py-2 heade">
       {" "}
       <nav
         className="topnav bg-gray-50 py-2 text-black-500 border-t border-b border-gray-500 border-opacity-25 text-sm"
@@ -128,7 +129,7 @@ const NavBar = () => {
                 </svg>
               </button>
               <div
-                className="dropdown-menu rounded-xl shadow-lg text-sm bg-white absolute top-full w-75 mt-0 hidden group-hover:block"
+                className="dropdown-menu rounded-xl z-50 shadow-lg text-sm bg-white absolute top-full w-75 mt-0 hidden group-hover:block"
                 aria-labelledby="dropdown-hover"
               >
                 <ul className="py-0">
@@ -184,7 +185,7 @@ const NavBar = () => {
           </div>
         </div>
       </nav>
-      <header className="shadow-md font-[sans-serif] tracking-wide relative ">
+      <header className="shadow-md font-[sans-serif] tracking-wide relative onn">
         <section className="md:flex lg:items-center relative py-3 lg:px-10 px-4 border-gray-200 border-b bg-white lg:min-h-[80px] max-lg:min-h-[60px]">
           <a
             href="javascript:void(0)"
@@ -353,7 +354,7 @@ const NavBar = () => {
           </button>
         </div>
       </header>
-      <header className="flex border-b bg-white font-sans  tracking-wide relative h-14 ">
+      <header className="flex border-b bg-white font-sans  tracking-wide relative h-14 nee ">
         <div className="par flex  items-center justify-between px-10 h-full gap-4 w-full">
           <div class="relative inline-block text-left">
             <div>
@@ -474,7 +475,7 @@ const NavBar = () => {
                   </svg>
                 </button>
 
-                <ul class="lg:flex lg:gap-x-10 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 md:h-full max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50">
+                <ul class="nee lg:flex lg:gap-x-10 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 md:h-full max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50">
                   <li class="max-lg:border-b max-lg:py-3">
                     <a
                       href="javascript:void(0)"

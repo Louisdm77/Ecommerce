@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import "./Ads.css";
 import headset from "../assets/Headset.png";
@@ -63,26 +63,105 @@ const Mini = () => {
     items.map((item, index) => ({ height: "40%", width: "30%" }))
   );
 
+  const [totalSec, setTotalSec] = useState(180000); // Total seconds to countdown from
+  const [sec, setSec] = useState(0);
+  const [min, setMin] = useState(0);
+  const [hour, setHour] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTotalSec((prevSec) => {
+        if (prevSec <= 0) {
+          clearInterval(timer);
+          return 0; // Stop at zero
+        }
+        return prevSec - 1; // Decrement by 1
+      });
+    }, 1000);
+
+    return () => clearInterval(timer); // Cleanup on unmount
+  }, []);
+
+  useEffect(() => {
+    // Calculate hours, minutes, and seconds from totalSec
+    setSec(Math.floor(totalSec % 60));
+    setMin(Math.floor((totalSec % 3600) / 60));
+    setHour(Math.floor(totalSec / 3600));
+  }, [totalSec]); // Update when totalSec changes
+
+  const formatTime = (h, m, s) => {
+    return `${String(h).padStart(2, "0")}:${String(m).padStart(
+      2,
+      "0"
+    )}:${String(s).padStart(2, "0")}`;
+  };
+
   return (
     <div
-      className="fle"
+      className="fle border-box"
       style={{
         display: "flex",
-        height: "100vh",
+        height: "130vh",
         justifyContent: "space-between",
-        padding: "10px",
+        padding: "40px",
       }}
     >
       <div className="first">
-        <div className="flex mt-5 mx-5 text-2xl font-bold">
-          <h2>Deals of the week</h2>
+        <div className=" mt-5 mx-5 text-2xl font-bold text-center ">
+          <h2 className="bold text-pink-500 nn">Deals of the week</h2>
         </div>
         <img
+          className="w-[60%] h-[55%] object-cover mx-auto "
           src={phone}
-          alt=""
-          style={{ width: "80%", height: "80%", margin: "auto" }}
+          alt="iphone"
+          // style={{ width: "80%", height: "80%", margin: "auto" }}
         />
+        <div className="flex justify-between items-center mx-5 mt-5 px-6 ">
+          <div>
+            <p className="text-md font-bold text-gray-500">IPHONE</p>
+            <h4 className="mt-3 text-lg font-bold">13 PRO MAX</h4>
+          </div>
+          <div>
+            <p className="text-sm text-end font-bold text-gray-500">
+              <strike>1033</strike>
+            </p>
+            <h4 className="text-red-500 text-2xl font-bold mt-3">$997</h4>
+          </div>
+        </div>{" "}
+        <div className="px-5 mt-3 border-box">
+          <div className="flex justify-between items-center mx-5 mt-5 px-6 ">
+            <h4>Available: 8</h4>
+            <h4>Sold: 2</h4>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 mt-4">
+            <div
+              class="bg-blue-600 h-2.5 rounded-full"
+              style={{ width: "25%" }}
+            ></div>
+          </div>
+        </div>
+        <div className="px-6 mt-6 flex justify-between ">
+          <div>
+            <h4 className="font-bold text-black-900">HURRY UP</h4>
+            <p className="text-gray-400">offer ends in:</p>
+          </div>
+          <div className="flex border-gray-300 border-2">
+            <div className="p-2 text-xl font-bold border-r-2 border-gray-300 text-center">
+              {hour < 10 ? `0${hour}` : hour}
+              <br /> <p className="text-gray-400">HRS</p>
+            </div>
+            <div className="p-2 text-xl font-bold border-r-2 border-gray-300 text-center">
+              <p>{min < 10 ? `0${min}` : min}</p>{" "}
+              <p className="text-gray-400">MIN</p>
+            </div>
+            <div className="p-2 text-xl font-bold text-center">
+              {sec < 10 ? `0${sec}` : sec} <br />{" "}
+              <p className="text-gray-400">SEC</p>
+            </div>
+          </div>
+        </div>
       </div>
+
       <div className="sec p-5 border-box">
         {items.map((item, index) => (
           <div
@@ -123,8 +202,8 @@ const Mini = () => {
               src={item.image}
               alt={item.item}
               style={{
-                width: "48%",
-                height: "48%",
+                width: "60%",
+                height: "50%",
                 margin: "auto",
               }}
             />{" "}

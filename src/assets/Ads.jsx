@@ -4,6 +4,7 @@ import { FaTruckFast } from "react-icons/fa6";
 import { GiWallet } from "react-icons/gi";
 import { GrPowerCycle } from "react-icons/gr";
 import { GiPriceTag } from "react-icons/gi";
+
 const Ads = () => {
   return (
     <div>
